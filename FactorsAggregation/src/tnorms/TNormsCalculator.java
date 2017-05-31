@@ -31,7 +31,12 @@ public abstract class TNormsCalculator {
 		if (lambda==0.0){
 			return drasticProduct(x, y);
 		}
-		return Math.exp( Math.pow(-(Math.pow(-Math.log(x),lambda) + Math.pow(-Math.log(y),lambda)),1.0/lambda ) );
+		return Math.exp( 
+						- Math.pow(
+								Math.pow(-Math.log(x),lambda) + Math.pow(-Math.log(y),lambda)
+								,1.0/lambda 
+								) 
+					   );
 	}
 	
 	/**
